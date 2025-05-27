@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main() {
+  float conta_prazo, conta_vista, total_prazo = 0, total_vista = 0;
+  char codigo_compra;
+  for (int i = 0; i < 10; i++) {
+    printf("Digite o codigo da compra %dº (V para vista e P para prazo): ", i + 1);
+    scanf(" %c", &codigo_compra);
+    if (codigo_compra == 'V' || codigo_compra == 'v') {
+      printf("Digite o valor da compra a vista R$ ");
+      scanf("%f", &conta_vista);
+      total_vista = total_vista + conta_vista;
+    }
+    else if (codigo_compra == 'P' || codigo_compra == 'p') {
+      printf("Digite o valor da compra a prazo R$ ");
+      scanf("%f", &conta_prazo);
+      total_prazo = total_prazo + conta_prazo;
+    }
+    else {
+      printf("Codigo invalido\n");
+      i--;
+      continue;
+    }
+  }
+  printf("O total de compras a vista foi R$ %.2f\n", total_vista);
+  printf("O total de compras a prazo foi R$ %.2f\n", total_prazo);
+  printf("O total de compras foi R$ %.2f\n", total_vista + total_prazo);
+  return 0;
+}
