@@ -7,6 +7,8 @@ void limparTela();
 int main() {
     int opcao; // Declarando a variável.
     while (TRUE) {
+        // Chamando a função Limpar Tela:
+        limparTela();
         // Início do Menu:
         printf("Escolha uma opção:\n");
         printf("1 - Cadastrar.\n");
@@ -20,10 +22,12 @@ int main() {
             case 1: // Se a opção for 1.
                 limparTela();
                 printf("Você escolheu a opção Cadastrar.\n");
+                sleep(1);
                 break;
             case 2: // Se a opção for 2.
                 limparTela();
                 printf("Você escolheu a opção Excluir.\n");
+                sleep(1);
                 break;
             case 3: // Se a opção for 3.
                 limparTela();
@@ -32,6 +36,7 @@ int main() {
             default: // Tratamento de erro.
                 limparTela();
                 printf("Opção inválida.\n");
+                sleep(1);
                 break;
         }
     }
