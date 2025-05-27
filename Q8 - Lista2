@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main() {
+  int numero, n = 2;
+  do {
+    printf("Digite um número positivo: ");
+    scanf("%d", &numero);
+  } while (numero < 0);
+
+  if (numero == 1) {
+    printf("O número %d não é primo.\n", numero);
+    return 0;
+  }
+  if (numero == 2) {
+    printf("O número %d é primo.\n", numero);
+    return 0;
+  }
+
+  do {
+    if (numero % n == 0) {
+      printf("O número %d não é primo.\n", numero);
+      return 0;
+    }
+    n++;
+  } while(n <= numero / 2);
+  printf("O número %d é primo.\n", numero);
+  return 0; // Fim do Programa.
+}
