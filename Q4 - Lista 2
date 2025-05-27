@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define TRUE 1
+// Protótipo da função Limpar Tela:
+void limparTela();
+// Função Principal:
+int main() {
+    int opcao; // Declarando a variável.
+    while (TRUE) {
+        // Início do Menu:
+        printf("Escolha uma opção:\n");
+        printf("1 - Cadastrar.\n");
+        printf("2 - Excluir.\n");
+        printf("3 - Sair.\n");
+        // Escolha do usuário:
+        printf("==> ");
+        scanf("%d", &opcao);
+        // Estrutura de decisão:
+        switch (opcao) {
+            case 1: // Se a opção for 1.
+                limparTela();
+                printf("Você escolheu a opção Cadastrar.\n");
+                break;
+            case 2: // Se a opção for 2.
+                limparTela();
+                printf("Você escolheu a opção Excluir.\n");
+                break;
+            case 3: // Se a opção for 3.
+                limparTela();
+                printf("Saindo do programa!\n");
+                return 0;
+            default: // Tratamento de erro.
+                limparTela();
+                printf("Opção inválida.\n");
+                break;
+        }
+    }
+    return 0;
+}
+// Função Limpar Tela:
+void limparTela() {
+    system("clear");
+}
