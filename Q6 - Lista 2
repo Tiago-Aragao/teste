@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main() {
+  // Declaração de Variáveis:
+  int contagem_loop = 0;
+  float chico = 1.70, juca = 1.10;
+  // Inicio do Loop:
+  while (juca <= chico) {
+    // Incremento das Variáveis:
+    chico += 0.02;
+    juca += 0.03;
+    // Contagem de quantos anos serão necessários:
+    contagem_loop++;
+  }
+  // Mostrando do Resultado:
+  printf("Serão necessários %d anos para Juca ser maior que Chico.", contagem_loop);
+  return 0; // Fim do Programa.
+}
