@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+  int idade[10], cont = 0;
+  for (int i = 0; i < 10; i++) {
+    printf("Digite a idade da pessoa %dº: ", i + 1);
+    scanf("%d", &idade[i]);
+    if (idade[i] >= 18) {
+      cont++;
+    }
+  }
+  printf("Das 10 pessoas, %d são maiores de idade.\n", cont);
+  return 0; // Fim do Programa.
+}
