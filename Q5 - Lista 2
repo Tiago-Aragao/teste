@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main() {
+  // Declaração de Variavel:
+  int numero = 100, limite = 300;
+  // Inicio do laço de repetição:
+  while(numero < limite) {
+    // Incremento da variavel:
+    numero++;
+    // Monstra apenas os numeros impares:
+    if (numero % 2 != 0) {
+      if (numero == limite-1)// Mostra o número:
+        printf("%d.", numero);
+      else
+        printf("%d, ", numero);
+    }
+  }
+  return 0; // Fim do Programa.
+}
