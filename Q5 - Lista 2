@@ -6,12 +6,16 @@ int main() {
   while(numero < limite) {
     // Incremento da variavel:
     numero++;
-    // Monstra apenas os numeros impares:
+    // Mostra apenas os numeros impares:
     if (numero % 2 != 0) {
-      if (numero == limite-1)// Mostra o número:
+      // Se for o ultimo numero, não mostra a virgula e sim ponto final:
+      if (numero == limite-1) {
         printf("%d.", numero);
-      else
+      }
+      // Se não for, mostra a virgula:
+      else {
         printf("%d, ", numero);
+      }    
     }
   }
   return 0; // Fim do Programa.
