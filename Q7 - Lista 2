@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() {
+  double A = 5000000, B = 7000000, contagem_loop = 0;
+  while(B > A) {
+    A = A + (A*0.03);
+    B = B + (B*0.02);
+    contagem_loop++;
+  }
+  printf("Quantidade necessaria para o país A ultrapassar o país B: %g anos.\n", contagem_loop);
+  return 0; // Fim do Programa.
+}
